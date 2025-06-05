@@ -4,86 +4,132 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>الصفحة الشخصية - رسول تحسين</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
-    body {
+    body, html {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: #121212;
-      color: #eee;
+      padding: 0;
+      height: 100%;
+      font-family: 'Tajawal', sans-serif;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    body {
+      background: linear-gradient(270deg, #300060, #602080, #9010a0, #602080, #300060);
+      background-size: 1000% 1000%;
+      animation: gradientWaves 30s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px;
     }
+
+    @keyframes gradientWaves {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
     .container {
-      background: linear-gradient(135deg, #1f1f1f 0%, #2e2e2e 100%);
-      max-width: 400px;
-      width: 100%;
-      border-radius: 15px;
+      animation: fadeInUp 1.2s ease forwards, float 6s ease-in-out infinite;
+      opacity: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      max-width: 420px;
+      width: 90%;
+      border-radius: 20px;
       padding: 30px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
       text-align: center;
     }
+
     .welcome {
       font-size: 1.5rem;
-      color: #ff6f61;
+      color: #f9a8ff;
       font-weight: 700;
       margin-bottom: 0.5em;
       letter-spacing: 2px;
     }
+
     h1 {
       font-size: 2.8rem;
       margin-bottom: 0.3em;
-      color: #ff6f61;
+      color: #fff0f8;
       letter-spacing: 2px;
     }
+
     p.bio {
       font-size: 1.2rem;
       margin-bottom: 2em;
-      color: #bbb;
+      color: #eee;
     }
+
     .social-links {
       display: flex;
       justify-content: center;
       gap: 25px;
     }
+
     .social-links a {
-      color: #eee;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 15px;
+      border-radius: 30px;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
     }
+
     .social-links a:hover {
-      color: #ff6f61;
+      background-color: #f0abfc;
+      color: #2d0033;
+      transform: scale(1.1);
     }
+
     .social-icon {
-      width: 28px;
-      height: 28px;
-      vertical-align: middle;
+      width: 24px;
+      height: 24px;
       fill: currentColor;
-      margin-left: 8px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="welcome">Welcome</div>
+    <div class="welcome">Welcome my dear</div>
     <h1>رسول تحسين</h1>
-    <p class="bio">مواقع التواصل الاجتماعي الخاص بي</p>
+    <p class="bio">مواقع التواصل الخاصة بي</p>
     <div class="social-links">
       <a href="https://instagram.com/H.1HR" target="_blank" aria-label="Instagram">
-        إنستغرام
         <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.88a1.13 1.13 0 11-2.26 0 1.13 1.13 0 012.26 0z"/>
         </svg>
+        إنستغرام
       </a>
       <a href="https://t.me/h_8hr" target="_blank" aria-label="Telegram">
-        تليجرام
         <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M22 2L2 11l6.5 2.3L8 20l4-3 4.5 3-1.5-6.5L22 2zM8.7 15.9l-.4-3.7 8.3-5.2-9.9 4.4-.5-2.3 13.5-5.6-15 7.2.1 9.1 3.9-3.9z"/>
         </svg>
+        تليجرام
       </a>
     </div>
   </div>
